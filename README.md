@@ -41,7 +41,7 @@ This section should summarize key statistics using data stored in the S3 bucket 
 - Data quality reports for each dataset
 # This descriptive analysis project aims to provide a comprehensive understanding of student enrolment and withdrawal patterns at UCW and to support data-driven improvements in academic planning, student retention strategies, and program offerings across departments.
 - Screen shot 1 : Operational environment analysis and Data analytics Platform 
-![AWS Project 1](Project 1 - Imeges/Screen shot 1-Operational environment analysis and Data analytics Platform.png)
+![AWS Project 1][Operational environment analysis and Data Analytics Platform](project1/dap1.png)
 - Screen shot 2 : Descriptive data set under operational environment
 ![AWS Project 1](Project 1 - Imeges/Screen shot 2 - Descriptive data set under operational environment.png)
 - Screen shot 3 : Descriptive data set under Analytical environment (S3 Bucket)
