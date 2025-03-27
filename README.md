@@ -1,51 +1,45 @@
 # cloud-computing-project
 # Descriptive Analysis - Project 1
 # Project Description: Descriptive Analysis of Enrolment and Withdrawal policy data at UCW
-# Project Title: Understanding Inspection report of incident happened on 2024
-- Objective: The primary goal of this project is to conduct a descriptive analysis of the Inspection report. Through this analysis, I aim to summarize key characteristics of inspection completions, identify trends, and generate insights that can inform health and safety strategies to UCW.
-# Dataset: The dataset includes descriptive data from Occupational health and safety at UCW over the recent year 2024, containing the following key features:
-- No of incident: Unique identifier for each incident
-- Date: Date and time of the incident
-- Department: Department name
-- Issue : What is the issue for the incident happened 
-- Severity : Medium, High , Low
-- Location : What is the exact place that incident happened
-- Status : Current status
-- Action taken : What kind of action taken
+# Project Title: Design and Deployment of a Scalable Data Analytics Platform (DAP) using AWS
+- Objective: The purpose of this project is to develop a scalable Data Analytics Platform (DAP) using AWS cloud services. The platform is designed to handle the complete data lifecycle, including ingestion, transformation, storage, querying, and quality control, for operational datasets. This infrastructure supports effective data management and analytical insights for informed decision-making.
+# Dataset:The project involves the ingestion and processing of three operational datasets:
+
+- **Student List**: Contains the list of registered students and their demographic or program details.
+- **Enrolment List**: Includes records of courses enrolled by students during a specific academic term.
+- **Withdrawal List**: Captures student withdrawals from courses or programs, including reasons and timestamps.
+
 # Methodology:
 # Steps
 # 1- Data Collection and Preparation:
 - Load the dataset using data analysis tools (Excel) .
 - Perform data cleaning to address missing values, correct data types, and remove duplicates.
 # 2- Descriptive Statistics: 
-This section should summarize key statistics using data stored in the S3 bucket “ hr-occupational-health-and-safety-imesha “ in its different stages (landing, raw, curated) and processed via an ETL pipeline.
-# Landing Zone (S3 Bucket - Landing Folder):
+This section should summarize key statistics using data stored in the S3 bucket “ registrar-__-rut “ in its different stages (raw,trf,curated) and processed via an ETL pipeline.
+# Raw Bucket (S3 Bucket - Raw Folder):
 - Upload the original dataset.
-- The dataset should contain raw data about incidents such as the incident ID, date, department, severity, and status.
-# Raw Zone (S3 Bucket - Raw Folder):
-- After the AWS Glue data brew processes the data from the landing zone, store the cleaned data (with corrected data types, missing values addressed, and duplicates removed) here.
-# Curated Zone (S3 Bucket - Curated Folder):
+- The dataset should contain raw data about incidents such as the incident student ID, name, major, enrolment year, GPA etc.
+# Transformed bucket (S3 Bucket - trf Folder):
+- After the AWS Glue data brew processes the data from the raw bucket, store the cleaned data (with corrected data types, missing values addressed, and duplicates removed) here.
+# Curated bucket (S3 Bucket - Curated Folder):
 - After completing the transformations and aggregations, store the final summarized data of AWS ETL pipeline  data set stored here.
 - The data here should include cleaned and processed insights ready for analysis and visualization.
 
 # 3- Data Visualization: 
 - In this section, use Draw.io for visualizing data insights , for visualizations created based on the curated data in the S3 bucket after ETL processing.
 # 4- Recommendations: 
-- Improving Health and Safety Protocols:
-- Departments with high incident frequency should receive targeted safety training and enhanced protocols.
-- Recommend focusing on departments that show high incident counts in the curated data.
-- Severity Reduction:
-- Suggest additional safety checks in areas with a high percentage of medium to high severity incidents, as identified in your visualizations.
-- Incident Tracking and Resolution:
-- Use data stored in the curated folder to enhance the tracking of ongoing and pending incidents, recommending an automated process for quick updates and alerts.
+- Prioritize departments with high withdrawal rates for targeted academic support.
+- Monitor enrolment trends to optimize course offerings.
+- Use curated insights to enhance retention strategies and improve student experience.
+- Implement regular data reviews for continuous academic planning.
 # Tools and Technologies:
 - Excel , AWS Services, S3 bucket
 - Data visualization tools : Draw.io ,ETL pipeline
 # Deliverables:
 - A detailed report summarizing the methods, findings, and recommendations.
 - Visualizations and dashboards to present key insights clearly.
-- A presentation for particular department head to communicate important findings and suggestions for future action.
-# This descriptive analysis project aims to provide a comprehensive understanding of incidents happened at UCW and to improve health and safety procedures and policies at UCW to mitigate the accidents.
+- Data quality reports for each dataset
+# This descriptive analysis project aims to provide a comprehensive understanding of student enrolment and withdrawal patterns at UCW and to support data-driven improvements in academic planning, student retention strategies, and program offerings across departments.
 - Screen shot 1 : Operational environment analysis and Data analytics Platform 
 ![AWS Project 1](Project 1 - Imeges/Screen shot 1-Operational environment analysis and Data analytics Platform.png)
 - Screen shot 2 : Descriptive data set under operational environment
