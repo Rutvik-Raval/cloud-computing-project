@@ -169,9 +169,6 @@ The project focuses on the following key areas:
 This initiative will empower UCW to enhance the integrity, reliability, and consistency of its academic datasets, resulting in more accurate reporting, improved student services, and data-driven academic decision-making.
 # Screen shots
 - DAP platform in Draw.io ![AWS Project 3](Project 3 - Imeges/DAP platform in Draw.io.png)
-- AWS glue data cleaning for quality ![AWS Project 3](Project 3 - Imeges/AWS glue data cleaning for quality.png)
-- Storing data in trusted folder in S3 bucket ![AWS Project 3](Project 3 - Imeges/Storing data in trusted folder in S3 bucket.png)
-- AWS Glue workflow ![AWS Project 3](Project 3 - Imeges/AWS Glue workflow.png)
 - AWS cloud watch ![AWS Project 3](Project 3 - Imeges/AWS cloud watch.png)
 - AWS cloud trail ![AWS Project 3](Project 3 - Imeges/AWS cloud trail.png)
 - AWS KMS creation for data encryption ![AWS Project 3](Project 3 - Imeges/AWS KMS creation for data encryption.png)
