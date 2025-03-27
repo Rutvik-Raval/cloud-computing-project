@@ -173,4 +173,4 @@ This initiative will empower UCW to enhance the integrity, reliability, and cons
 - AWS cloud trail ![Screenshot: CloudTrail setup for auditing changes](project3/cloudtrail.png)
 - AWS KMS creation for data encryption ![Screenshot: Default encryption enabled using AWS KMS](project3/default_encryption.png)
 
-
+I completed the course assessment and scored 95% moreover also earned a Badge from AWS. Below are related screenshots:
