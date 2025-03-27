@@ -93,54 +93,63 @@ Initial data collected from academic records contained inconsistencies, such as 
 # Screen shots
 - AWS Glue data brew cleaning and structuring data !![Screen shot: Data cleaning process in AWS Glue DataBrew](project2/data%20cleaning%20in%20glue%20data%20brew.png)
 - Projects created ![Screen shot: Project setup in AWS Glue DataBrew](project2/project_in_databrew.png)
-- Atheena platforms data cleaning and structuring ![AWS Project 2](Project - 2 - Imeage/Atheena platforms data cleaning and structuring.png)
+- Atheena platforms data cleaning and structuring ![Screen shot: Querying the cleaned dataset using Amazon Athena](project2/athena.png)
 
   
 # Data Quality Control  - Project 3
-# Project Description:
-- Data Quality Control Initiative for Occupational Health and Safety Inspection Data at UCW
-# Project Title:
-- Implementation of Data Quality Control Measures for Occupational Health and Safety at UCW
-# Objective:
-- The primary objective of this project is to establish a comprehensive Data Quality Control (DQC) framework for Occupational Health and Safety (OHS) inspection data at UCW. This framework will ensure the accuracy, completeness, consistency, and security of OHS inspection data, supporting safety improvements, compliance with regulatory standards, and risk mitigation.
-# Background:
-- UCW has accumulated a large volume of inspection data related to occupational health and safety incidents across various departments. Issues such as inaccuracies, incomplete reports, and inconsistencies in formats have emerged. These data quality issues could impact decision-making and UCW’s ability to maintain a safe working environment. This project aims to implement robust data quality control measures using AWS services to address these challenges.
-# Scope:
-The project will focus on the following key areas:
--	Data Profiling: Analyzing existing inspection datasets to assess quality levels.
--	Data Cleansing: Developing processes to correct inaccuracies and standardize formats.
--	Data Validation: Implementing validation rules and checks to ensure data integrity.
--	Monitoring and Reporting: Establishing real-time monitoring and dashboards to track data quality metrics using AWS services.
--	Security and Compliance: Ensuring data security and regulatory compliance using AWS security services.
--	Training and Awareness: Creating training programs for staff on maintaining data quality.
-# Methodology:
-# 1.Current State Assessment:
--Conduct a thorough analysis of current OHS data sources (e.g., inspection reports, incident logs) and workflows.
-Identify key datasets that significantly impact UCW’s compliance with safety standards and regulations.
-# 2.Data Profiling:
-- Use AWS Glue , ETL to profile OHS datasets, assessing the completeness, validity, and consistency of inspection records
-- Document findings, highlighting areas where data quality issues exist (e.g., missing fields in incident descriptions, inconsistent severity ratings).
-# 3.Establish Data Quality Metrics:
--	Define clear data quality metrics such as error rates, completeness percentages, duplicate records, and compliance with safety standards.
--	Track these metrics using AWS CloudWatch for real-time monitoring and alerting of data quality trends.
-# 4.Validation Rules and Procedures:
--	Set up validation rules using AWS Glue to ensure new data entries adhere to defined quality standards before they are processed.
--	Implement data entry guidelines, stored in S3 (trusted folder), to promote consistency and accuracy in future inspections.
--	Use AWS Glue Workflow to automate the entire data quality control process, orchestrating the tasks in a logical sequence, including data profiling, cleansing, validation, and consolidation.
--	The workflow will trigger each step automatically, ensuring that the data quality processes are efficiently managed and minimizing manual intervention.
--	AWS Glue Workflow will also monitor the completion of each task and trigger notifications in AWS CloudWatch for real-time tracking and alerting if any steps fail.
-# Monitoring and Reporting:
--	Utilize AWS CloudWatch to monitor key data quality metrics in real-time, setting alerts for significant deviations from established KPIs (e.g., sudden spikes in missing values or inconsistencies).
--	Create a CloudWatch dashboard for visualizing data quality trends and performance.
--	Use AWS CloudTrail for tracking changes to the data environment, ensuring full auditability of data quality issues and resolution steps.
-# 6.Security and Compliance:
--	Use AWS IAM for role-based access control, ensuring only authorized personnel can modify or validate inspection data.
--	Encrypt sensitive inspection data using AWS KMS to maintain data confidentiality and compliance with data security regulations.
-# 7.Training and Best Practices:
--	Develop training resources and workshops to educate UCW staff on data quality best practices, ensuring data integrity in future inspections.
--	Establish a culture of accountability where employees understand their role in maintaining data quality and security.
-# 8.Feedback Mechanism:
--	Implement a feedback loop for continuous improvement of the data quality control process based on real-time monitoring and user input.
+### Project Description:
+This section introduces a framework to ensure the quality of student-related datasets processed through the Data Analytics Platform. Quality control steps include profiling, validation, and lifecycle management using AWS services.
+### Project Title:
+Data Quality Control for Academic Records at UCW
+### Objective:
+To design and implement a data quality control process for the student, enrolment, and withdrawal datasets. The goal is to ensure the final datasets meet standards of accuracy, completeness, and consistency.
+### Background:
+UCW maintains large volumes of student-related data, including enrolment records, withdrawal details, and academic status across multiple terms. However, inconsistencies such as missing values, irregular formatting, and duplication were observed during earlier analysis stages. These data quality issues can hinder accurate reporting, policy decisions, and academic planning. This project focuses on establishing a structured data quality control framework using AWS services to ensure data integrity, consistency, and reliability across curated datasets.
+### Scope:
+The project focuses on the following key areas:
+- **Data Profiling**: Analyzing student enrolment, withdrawal, and academic datasets to assess baseline data quality.
+- **Data Cleansing**: Applying structured cleaning steps to resolve missing values, standardize column formats, and eliminate duplicates.
+- **Data Validation**: Defining and enforcing validation rules to ensure consistency in student records across datasets.
+- **Monitoring and Reporting**: Using AWS tools to review data quality metrics, identify recurring issues, and support academic reporting needs.
+- **Security and Compliance**: Managing access, encryption, and data lifecycle policies to ensure privacy and compliance with institutional standards.
+- **Documentation and Awareness**: Documenting quality control processes and promoting best practices for future academic data handling.
+  
+### Methodology:
+
+#### 1. Current State Assessment:
+- Conduct a detailed review of existing student-related datasets, including enrolment records, withdrawal logs, and academic status files.
+- Identify key quality issues such as inconsistent column naming, missing values, and data duplication that may impact analytics and academic reporting.
+
+#### 2. Data Profiling:
+- Use AWS Glue DataBrew and ETL jobs to profile the datasets and assess completeness, validity, and structural consistency.
+- Document profiling results, highlighting common issues like null entries in critical fields (e.g., course codes, withdrawal dates) or misaligned formats.
+
+#### 3. Establish Data Quality Metrics:
+- Define quantifiable quality metrics such as null value percentages, duplicate records, data type mismatches, and formatting consistency.
+- Monitor these metrics using AWS Glue Data Quality or AWS CloudWatch to detect and alert on anomalies.
+
+#### 4. Validation Rules and Procedures:
+- Establish validation rules within AWS Glue to ensure data conforms to academic structure and business logic (e.g., valid course codes, non-future withdrawal dates).
+- Store standardized input schemas in S3 (trusted zone) to guide future data uploads.
+- Use a structured ETL pipeline to orchestrate the profiling, cleaning, and validation process sequentially, ensuring minimal manual handling.
+
+#### 5. Monitoring and Reporting:
+- Use AWS CloudWatch to monitor data quality metrics in real-time and configure alerts for deviations from predefined thresholds (e.g., >10% null values).
+- Generate and maintain dashboards visualizing data trends and issue frequency.
+- Track changes to datasets and quality pipelines using AWS CloudTrail for full traceability and auditing.
+
+#### 6. Security and Compliance:
+- Enforce access controls using AWS IAM to restrict editing privileges to authorized users only.
+- Apply AWS KMS to encrypt sensitive student information, maintaining confidentiality and compliance with institutional data governance standards.
+
+#### 7. Training and Best Practices:
+- Develop internal documentation and user guidelines on maintaining data quality during uploads and transformations.
+- Encourage best practices through staff awareness, fostering responsibility for consistent data handling.
+
+#### 8. Feedback Mechanism:
+- Implement a feedback loop using monitored quality trends and manual review outcomes to continuously refine data rules and processing logic.
+- Use recurring validation reports to adapt the data quality framework to future academic needs.
+
 # Tools and Technologies:
 -	AWS Glue for data profiling, cleansing, and transformation.
 -	AWS Glue Workflow for orchestrating the data quality process.
@@ -154,9 +163,10 @@ Identify key datasets that significantly impact UCW’s compliance with safety s
 •	Cleaned and validated OHS datasets ready for reporting and analysis.
 •	Training materials and workshops designed to educate staff on data quality best practices.
 •	A CloudWatch dashboard visualizing real-time data quality metrics.
-# Timeline:
--	Expected completion of the project: 8 weeks, including assessment, implementation, training, and monitoring setup.
-This initiative will empower UCW to enhance the integrity, reliability, and security of its Occupational Health and Safety data, resulting in better decision-making, improved safety outcomes, and compliance with regulatory requirements.
+### Timeline:
+- Week 5: Data quality profiling and rule setup
+- Week 6: Validation, lifecycle policy configuration, and reporting
+This initiative will empower UCW to enhance the integrity, reliability, and consistency of its academic datasets, resulting in more accurate reporting, improved student services, and data-driven academic decision-making.
 # Screen shots
 - DAP platform in Draw.io ![AWS Project 3](Project 3 - Imeges/DAP platform in Draw.io.png)
 - AWS glue data cleaning for quality ![AWS Project 3](Project 3 - Imeges/AWS glue data cleaning for quality.png)
