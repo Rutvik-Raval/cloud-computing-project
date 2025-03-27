@@ -71,22 +71,16 @@ Initial data collected from academic records contained inconsistencies, such as 
   Columns: `Student_ID`, `Course_Code`, `Withdrawal_Date`, `Reason`, `Status`
   
 # Methodology:
-# 1.Data Collection:
-- Gather datasets from various sources (inspection reports, safety logs) and import them into AWS S3 for storage
-- Use AWS Glue to catalog the datasets, including details like incident ID, date, department, issue, severity, and status, creating a metadata repository for easy data discovery and management.
-# 2.Data Assessment:
-- Utilize AWS Glue DataBrew to perform an initial assessment of the inspection report data. This includes identifying missing values, duplicates, and inconsistencies (e.g., discrepancies in incident dates or severity ratings).
-- Use DataBrew profiling tools to document data types, formats (e.g., date formats), and any issues across datasets.
-# 3.Data Cleaning:
-- Leverage AWS Glue DataBrew to address missing values in inspection reports, either by imputation or exclusion depending on the data's context (e.g., missing incident descriptions or incomplete actions).
-- Standardize formats for fields such as dates, department names, and severity levels (e.g., “low,” “medium,” “high”) using DataBrew transformations.
-- Remove duplicate entries for incidents and normalize categorical variables like incident status ("resolved," "pending," etc.).
-# 5.Data Consolidation:
-- Set up AWS glue data brew consolidate datasets into S3 bucket (in raw folders)
-- Set up AWS Glue ETL jobs to consolidate datasets and store the consolidated data in S3 (in curated folders) for future analytics and reporting, providing a unified view of health and safety data.
-# 6.Documentation and Validation:
-- Document the data wrangling process using AWS Glue’s catalog features, detailing data sources, cleaning methods, and transformations applied to the occupational health and safety data.
-- Validate the final dataset through exploratory analysis using AWS Athena to ensure the data is complete and accurate, ready for insights into workplace safety trends, departmental performance, and incident resolution effectiveness.
+### Methodology:
+1. **Data Profiling**  
+   AWS Glue DataBrew profiling tools were used to assess data quality by identifying nulls, incorrect types, and duplicate rows.
+2. **Data Cleaning**  
+   - Renamed all column headers across datasets for consistency by converting them to lowercase and replacing spaces with underscores (e.g., `Student Name` → `student_name`), ensuring 
+     uniform schema across files.
+   - Removed duplicate records
+   - Resolved missing or incomplete entries
+3. **Data Transformation and Storage**  
+   Transformed datasets were stored in the S3 Transformed Bucket. Final datasets were written to the S3 Curated Bucket.
 # Tools and Technologies:
 - AWS Glue and AWS Glue DataBrew for data cleaning, transformation, and ETL.
 - AWS Athena for querying and performing analysis on structured datasets in S3.
@@ -96,7 +90,6 @@ Initial data collected from academic records contained inconsistencies, such as 
 -	Visualizations illustrating the key data insights and confirmations of data quality checks were conducted during the process.
 #	Timeline:
 - Expected completion of the project: 6 weeks, including phases for assessment, cleaning, transformation, and documentation.
-  This modified project description ensures that the project objectives and datasets align with the HR-Occupational Health and Safety domain and UCW's inspection report analysis.
 # Screen shots
 - DAP from Draw.io ![AWS Project 2](Project - 2 - Imeage/DAP from Draw 2.png)
 - AWS Glue data brew cleaning and structuring data ![AWS Project 2](Project - 2 - Imeage/AWS Glue data brew cleaning and structuring data.png)
