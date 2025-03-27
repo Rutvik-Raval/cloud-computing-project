@@ -43,7 +43,7 @@ This section should summarize key statistics using data stored in the S3 bucket 
 - Screen shot 1 : Operational environment analysis and Data analytics Platform 
 ![Screen shot 1: Operational environment analysis and Data Analytics Platform](project1/dap1.png)
 - Screen shot 2 : Descriptive data set under operational environment
-![AWS Project 1](Project 1 - Imeges/Screen shot 2 - Descriptive data set under operational environment.png)
+![Screen shot 2: Datasets uploaded to the raw zone (S3)](project1/datasets.png)
 - Screen shot 3 : Descriptive data set under Analytical environment (S3 Bucket)
 ![AWS Project 1](Project 1 - Imeges/Screen shot 3 - Descriptive data set under Analytical environment (S3 Bucket).png)
 - Screen shot 4 : Draw.io pipeline workings - Inspection completed rate visualization
