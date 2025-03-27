@@ -46,8 +46,8 @@ This section should summarize key statistics using data stored in the S3 bucket 
 ![Screen shot 2: Datasets uploaded to the raw zone (S3)](project1/datasets.png)
 - Screen shot 3 : Descriptive data set under Analytical environment (S3 Bucket)
 ![Screen shot 3: Folders structure inside the raw S3 bucket](project1/folders%20in%20raw%20bucket.png)
-- Screen shot 4 : Draw.io pipeline workings - Inspection completed rate visualization
-![AWS Project 1](Project 1 - Imeges/Inspection completed rate visualization - 2.png)
+- Screen shot 4 : Draw.io pipeline workings 
+![Screen shot 4: Visual representation of the ETL pipeline](project1/visual%20etl.png)
 - Screen shot 5 : ETL Pipeline for inspection data set
 ![AWS Project 1](Project 1 - Imeges/Screen shot 5 - ETL Pipeline for inspection data set.png)
 - Screen shot 6 : Data stored under curated folder in S3 bucket
