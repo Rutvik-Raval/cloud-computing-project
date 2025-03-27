@@ -168,8 +168,9 @@ The project focuses on the following key areas:
 - Week 6: Validation, lifecycle policy configuration, and reporting
 This initiative will empower UCW to enhance the integrity, reliability, and consistency of its academic datasets, resulting in more accurate reporting, improved student services, and data-driven academic decision-making.
 # Screen shots
-- DAP platform in Draw.io ![AWS Project 3](Project 3 - Imeges/DAP platform in Draw.io.png)
-- AWS cloud watch ![AWS Project 3](Project 3 - Imeges/AWS cloud watch.png)
-- AWS cloud trail ![AWS Project 3](Project 3 - Imeges/AWS cloud trail.png)
-- AWS KMS creation for data encryption ![AWS Project 3](Project 3 - Imeges/AWS KMS creation for data encryption.png)
+- DAP platform in Draw.io ![Screenshot: Data Quality Control Architecture Diagram (DAP)](project3/dap_qc.png)
+- AWS cloud watch ![Screenshot: CloudWatch dashboard for data quality monitoring](project3/cloudwatch.png)
+- AWS cloud trail ![Screenshot: CloudTrail setup for auditing changes](project3/cloudtrail.png)
+- AWS KMS creation for data encryption ![Screenshot: Default encryption enabled using AWS KMS](project3/default_encryption.png)
+
 
