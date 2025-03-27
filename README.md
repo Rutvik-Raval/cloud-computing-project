@@ -51,15 +51,25 @@ This section should summarize key statistics using data stored in the S3 bucket 
 - Screen shot 6 : Data stored under curated folder in S3 bucket
 ![Screen shot 5: Objects stored in the curated S3 bucket](project1/objects%20in%20curated%20s3.png)
 # Data Wrangling - Project 2
-# Project Title: Data Wrangling for Enhanced Occupational Health and Safety Analytics at UCW
-# Objective:
-- The primary goal of this project is to perform comprehensive data wrangling to prepare a robust dataset for occupational health and safety analytics at UCW. By cleaning, transforming, and consolidating data from various inspection reports and safety logs, the project aims to enhance the accuracy and usability of safety-related data for subsequent analysis and reporting. This will help in identifying trends, mitigating risks, and improving workplace safety protocols.
-# Background:
-- UCW has accumulated inspection data from multiple departments regarding occupational health and safety incidents. However, this data is often inconsistent, incomplete, or fragmented, making it difficult to derive actionable insights. Effective data wrangling will enable UCW to make informed decisions and develop targeted safety strategies to reduce workplace risks and incidents.
+### Project Description:
+This section of the project addresses the cleaning and preparation of institutional data required for analysis. The data wrangling process ensures that the datasets are accurate, consistent, and ready for downstream analytics.
+# Project Title: Data Wrangling of Student Enrolment and Withdrawal Datasets at UCW
+### Objective:
+The objective is to perform structured data wrangling tasks to transform three source datasets into a unified and cleaned format. The process involves addressing missing values, data type inconsistencies, and formatting issues.
+### Background:
+Initial data collected from academic records contained inconsistencies, such as irregular date formats, missing values, and non-standardized column labels. Data wrangling was required to align records across student, enrolment, and withdrawal datasets.
 # Dataset: The data wrangling process will involve various datasets, including:
-- Incident Reports: Records of workplace incidents, including unique incident IDs, dates, departments, issues, severity levels, and current status.
-- Safety Logs: Details of safety inspections, actions taken, and follow-up measures.
-- Department Information: Metadata about UCW departments, including department names and headcounts.
+### Dataset:
+
+- `student_dataset.csv`  
+  Columns: `Student_ID`, `Student_Name`, `Email`, `Program`, `Level`, `Status`
+
+- `Enrollment_List__Updated_.csv`  
+  Columns: `Student_ID`, `Course_Code`, `Course_Name`, `Enrolment_Date`, `Term`, `Status`
+
+- `withdrawal_dataset.csv`  
+  Columns: `Student_ID`, `Course_Code`, `Withdrawal_Date`, `Reason`, `Status`
+  
 # Methodology:
 # 1.Data Collection:
 - Gather datasets from various sources (inspection reports, safety logs) and import them into AWS S3 for storage
