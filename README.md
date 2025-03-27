@@ -92,7 +92,7 @@ Initial data collected from academic records contained inconsistencies, such as 
 - Expected completion of the project: 6 weeks, including phases for assessment, cleaning, transformation, and documentation.
 # Screen shots
 - AWS Glue data brew cleaning and structuring data !![Screen shot: Data cleaning process in AWS Glue DataBrew](project2/data%20cleaning%20in%20glue%20data%20brew.png)
-- Projects created ![AWS Project 2](Project - 2 - Imeage/Projects created.png)
+- Projects created ![Screen shot: Project setup in AWS Glue DataBrew](project2/project_in_databrew.png)
 - Atheena platforms data cleaning and structuring ![AWS Project 2](Project - 2 - Imeage/Atheena platforms data cleaning and structuring.png)
 
   
